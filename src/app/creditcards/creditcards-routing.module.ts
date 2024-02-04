@@ -8,16 +8,16 @@ import { PageNotFoundComponent } from '../page-not-found/page-not-found.componen
 import { AddComponent } from './add/add.component';
 
 const routes: Routes = [
-  { path: '', component: CreditcardsComponent},
-  { path: 'add', component: AddComponent},
-  { path: 'view/:id', component: ViewComponent},
-  { path: 'edit/:id', component: EditComponent},
-  { path: 'delete/:id', component: DeleteComponent},
-  { path: '**', component: PageNotFoundComponent}
+  { path: '', component: CreditcardsComponent },
+  { path: 'add', component: AddComponent },
+  { path: 'view/:id', component: ViewComponent },
+  { path: 'edit/:id', component: EditComponent },
+  { path: 'delete/:id', component: DeleteComponent },
+  { path: '**', component: PageNotFoundComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class CreditcardsRoutingModule { }
+export class CreditcardsRoutingModule {}

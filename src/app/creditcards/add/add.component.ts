@@ -7,43 +7,43 @@ import { CreditcardsService } from 'src/app/services/creditcards.service';
 @Component({
   selector: 'app-add',
   templateUrl: './add.component.html',
-  styleUrls: ['./add.component.scss']
+  styleUrls: ['./add.component.scss'],
 })
 export class AddComponent {
-
   private subscription: Subscription | undefined;
 
-  constructor(private creditcardsService:CreditcardsService,
-    private router: Router){
-  }
+  constructor(
+    private creditcardsService: CreditcardsService,
+    private router: Router
+  ) {}
 
   newCreditCard: CreditCard = {
     id: undefined,
-    name: "",
-    description: "",
-    bankName: "",
+    name: '',
+    description: '',
+    bankName: '',
     maxCredit: 5000,
     interestRate: 12,
     active: true,
-    recommendedScore: "100-500",
+    recommendedScore: '100-500',
     annualFee: 12,
-    termsAndConditions: "Terms and conditions for the credit card",
+    termsAndConditions: 'Terms and conditions for the credit card',
     createdDate: Date(),
-    updatedDate: Date()
+    updatedDate: Date(),
+  };
+
+  saveCreditCard() {
+    this.subscription = this.creditcardsService
+      .createCreditCard(this.newCreditCard)
+      .subscribe((data) => {
+        alert('Credit Card Added');
+        this.router.navigate(['creditcards']);
+      });
   }
 
-  
-  saveCreditCard(){
-    this.subscription = this.creditcardsService.createCreditCard(this.newCreditCard).subscribe(data => {
-      alert("Credit Card Added");
-      this.router.navigate(['creditcards']);
-    })
-  }
-
-  ngOnDestroy(){
-    if(this.subscription) {
+  ngOnDestroy() {
+    if (this.subscription) {
       this.subscription.unsubscribe();
     }
   }
-
 }

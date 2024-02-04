@@ -4,15 +4,14 @@ import { CreditCard } from '../models/credit-card';
 import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CreditcardsService {
+  private apiUrl = 'http://localhost:3000/creditcards';
 
-  private apiUrl = "http://localhost:3000/creditcards";
+  constructor(private httpClient: HttpClient) {}
 
-  constructor(private httpClient: HttpClient) { }
-
-  // CRUD Functionality 
+  // CRUD Functionality
 
   // Create New Credit Card
   createCreditCard(creditCard: CreditCard): Observable<CreditCard> {
@@ -20,7 +19,7 @@ export class CreditcardsService {
   }
 
   // Get All Credit Cards
-  getCreditCards(): Observable<CreditCard[]>{
+  getCreditCards(): Observable<CreditCard[]> {
     return this.httpClient.get<CreditCard[]>(this.apiUrl);
   }
 
@@ -30,7 +29,7 @@ export class CreditcardsService {
     return this.httpClient.get<CreditCard>(url);
   }
 
-  // Update Functionality 
+  // Update Functionality
   updateCreditCard(creditCard: CreditCard): Observable<CreditCard> {
     const url = `${this.apiUrl}/${creditCard.id}`;
     return this.httpClient.put<CreditCard>(url, creditCard);
@@ -41,5 +40,4 @@ export class CreditcardsService {
     const url = `${this.apiUrl}/${id}`;
     return this.httpClient.delete<void>(url);
   }
-
 }
