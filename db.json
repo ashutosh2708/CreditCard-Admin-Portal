@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "SBI Bank",
-      "description": "SBI Bank offers customers with various options",
+      "description": "This is a test credit card",
       "bankName": "SBI Bank",
       "maxCredit": 3000,
       "interestRate": 10,
@@ -17,7 +17,7 @@
     {
       "id": 2,
       "name": "Mastercard",
-      "description": "Mastercard offers customers with various options",
+      "description": "This is a test credit card",
       "bankName": "Mastercard",
       "maxCredit": 3000,
       "interestRate": 10,
@@ -31,7 +31,7 @@
     {
       "id": 3,
       "name": "Visa",
-      "description": "Visa offers customers with various options",
+      "description": "This is a test credit card",
       "bankName": "Visa",
       "maxCredit": 3000,
       "interestRate": 10,
@@ -45,7 +45,7 @@
     {
       "id": 4,
       "name": "Bank of America",
-      "description": "Bank of America offers customers with various options",
+      "description": "This is a test credit card",
       "bankName": "Bank of America",
       "maxCredit": 3000,
       "interestRate": 10,
@@ -59,7 +59,7 @@
     {
       "id": 5,
       "name": "Bank of America",
-      "description": "Bank of America offers customers with various options",
+      "description": "This is a test credit card",
       "bankName": "Bank of America",
       "maxCredit": 3000,
       "interestRate": 10,
@@ -73,7 +73,7 @@
     {
       "id": 6,
       "name": "Bank of America",
-      "description": "Bank of America offers customers with various options",
+      "description": "This is a test credit card",
       "bankName": "Bank of America",
       "maxCredit": 3000,
       "interestRate": 10,
@@ -87,7 +87,7 @@
     {
       "id": 7,
       "name": "Bank of America",
-      "description": "Bank of America offers customers with various options",
+      "description": "This is a test credit card",
       "bankName": "Bank of America",
       "maxCredit": 3000,
       "interestRate": 10,
@@ -101,7 +101,7 @@
     {
       "id": 8,
       "name": "Bank of America",
-      "description": "Bank of America offers customers with various options",
+      "description": "This is a test credit card",
       "bankName": "Bank of America",
       "maxCredit": 3000,
       "interestRate": 10,
@@ -115,7 +115,7 @@
     {
       "id": 9,
       "name": "Bank of America",
-      "description": "Bank of America offers customers with various options",
+      "description": "This is a test credit card",
       "bankName": "Bank of America",
       "maxCredit": 3000,
       "interestRate": 10,
@@ -129,7 +129,7 @@
     {
       "id": 10,
       "name": "Bank of America",
-      "description": "Bank of America offers customers with various options",
+      "description": "This is a test credit card",
       "bankName": "Bank of America",
       "maxCredit": 3000,
       "interestRate": 10,
@@ -143,7 +143,7 @@
     {
       "id": 11,
       "name": "Bank of America",
-      "description": "Bank of America offers customers with various options",
+      "description": "This is a test credit card",
       "bankName": "Bank of America",
       "maxCredit": 3000,
       "interestRate": 10,
@@ -157,7 +157,7 @@
     {
       "id": 12,
       "name": "Bank of America",
-      "description": "Bank of America offers customers with various options",
+      "description": "This is a test credit card",
       "bankName": "Bank of America",
       "maxCredit": 3000,
       "interestRate": 10,
@@ -171,7 +171,7 @@
     {
       "id": 13,
       "name": "Bank of America",
-      "description": "Bank of America offers customers with various options",
+      "description": "This is a test credit card",
       "bankName": "Bank of America",
       "maxCredit": 3000,
       "interestRate": 10,
@@ -181,20 +181,6 @@
       "termsAndConditions": "Following are the terms and conditions",
       "createdDate": "2023-31-08",
       "updatedDate": "2023-31-08"
-    },
-    {
-      "id": 14,
-      "name": "Test1",
-      "description": "Some bank",
-      "bankName": "Bank1",
-      "maxCredit": 10000,
-      "interestRate": 12,
-      "active": true,
-      "recommendedScore": "100-500",
-      "annualFee": 12,
-      "termsAndConditions": "Terms and Conditions of the card",
-      "createdDate": "2023-10-17T04:00:00.000Z",
-      "updatedDate": "2024-12-10T05:00:00.000Z"
     },
     {
       "id": 16,
@@ -212,7 +198,7 @@
     },
     {
       "name": "IDBI Bank",
-      "description": "IDBI Bank offers customers with various options",
+      "description": "This is a test credit card",
       "bankName": "IDBI Bank",
       "maxCredit": 5000,
       "interestRate": 12,
