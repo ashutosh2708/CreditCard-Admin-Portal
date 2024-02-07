@@ -17,7 +17,7 @@ export class DeleteComponent {
   constructor(
     private router: ActivatedRoute,
     private route: Router,
-    private matSnackBar: MatSnackBar,
+    private SnackBar: MatSnackBar,
     private creditcardsService: CreditcardsService
   ) {
     this.creditCardId = parseInt(this.router.snapshot.paramMap.get('id') || '');
@@ -33,10 +33,10 @@ export class DeleteComponent {
   }
 
   showSuccessMessage(message: string) {
-    this.matSnackBar.open(message, 'Close', {
+    this.SnackBar.open(message, 'Close', {
       duration: 3000,
-      horizontalPosition: 'end',
-      verticalPosition: 'top',
+      horizontalPosition: 'center',
+      verticalPosition: 'bottom',
     });
   }
 

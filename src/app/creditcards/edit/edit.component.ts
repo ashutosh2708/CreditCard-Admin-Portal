@@ -81,6 +81,8 @@ export class EditComponent {
   showSuccessMessage(message: string) {
     this.snackBar.open(message, 'Close', {
       duration: 3000,
+      horizontalPosition: 'center',
+      verticalPosition: 'bottom',
     });
   }
 

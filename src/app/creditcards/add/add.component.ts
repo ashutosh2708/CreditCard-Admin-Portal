@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { CreditCard } from 'src/app/models/credit-card';
@@ -14,7 +15,8 @@ export class AddComponent {
 
   constructor(
     private creditcardsService: CreditcardsService,
-    private router: Router
+    private router: Router,
+    private SnackBar: MatSnackBar
   ) {}
 
   newCreditCard: CreditCard = {
@@ -36,9 +38,17 @@ export class AddComponent {
     this.subscription = this.creditcardsService
       .createCreditCard(this.newCreditCard)
       .subscribe((data) => {
-        alert('Credit Card Added');
+        this.showSuccessMessage('Credit Card Added');
         this.router.navigate(['creditcards']);
       });
+  }
+
+  showSuccessMessage(message: string) {
+    this.SnackBar.open(message, 'Close', {
+      duration: 3000,
+      horizontalPosition: 'center',
+      verticalPosition: 'bottom',
+    });
   }
 
   ngOnDestroy() {
