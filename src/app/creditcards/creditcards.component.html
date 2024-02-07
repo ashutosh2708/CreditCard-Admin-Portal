@@ -1,22 +1,22 @@
 <div class="mat-cards" style="display: flex; flex-direction: row">
   <mat-card class="mat-cards count-card bg-success">
-    <mat-card-title>Num of Cards with 3000 Amount</mat-card-title>
-    <mat-card-content>{{ creditCardMaximumAmount }}</mat-card-content>
-  </mat-card>
-
-  <mat-card class="mat-cards count-card bg-warning">
-    <mat-card-title>Num of Cards</mat-card-title>
-    <mat-card-content>{{ creditCardMaximumInterest }}</mat-card-content>
-  </mat-card>
-
-  <mat-card class="mat-cards count-card bg-info">
-    <mat-card-title>Num of Cards</mat-card-title>
-    <mat-card-content>10</mat-card-content>
+    <mat-card-title>Total Credit</mat-card-title>
+    <mat-card-content class="mat-content">{{ totalCreditCardAmount }}</mat-card-content>
   </mat-card>
 
   <mat-card class="mat-cards count-card bg-primary">
     <mat-card-title>Num of Cards</mat-card-title>
-    <mat-card-content>10</mat-card-content>
+    <mat-card-content class="mat-content">{{totalCreditCards}}</mat-card-content>
+  </mat-card>
+
+  <mat-card class="mat-cards count-card bg-warning">
+    <mat-card-title>Maximum Interest</mat-card-title>
+    <mat-card-content class="mat-content">{{ creditCardMaximumInterest }}%</mat-card-content>
+  </mat-card>
+
+  <mat-card class="mat-cards count-card bg-info">
+    <mat-card-title>Num of Cards with 3000 Amount</mat-card-title>
+    <mat-card-content class="mat-content">{{ creditCardMaximumAmount }}</mat-card-content>
   </mat-card>
 </div>
 

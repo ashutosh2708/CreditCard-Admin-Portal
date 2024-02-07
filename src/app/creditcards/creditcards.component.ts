@@ -14,8 +14,10 @@ import { CreditcardsService } from '../services/creditcards.service';
 export class CreditcardsComponent {
   creditcards: CreditCard[] = [];
 
-  creditCardMaximumAmount: number = 0;
+  totalCreditCardAmount: number = 0;
+  totalCreditCards: number = 0;
   creditCardMaximumInterest: number = 0;
+  creditCardMaximumAmount: number = 0;
 
   constructor(private creditCardsService: CreditcardsService) {
     this.creditCardsService.getCreditCards().subscribe((data: CreditCard[]) => {
@@ -53,11 +55,21 @@ export class CreditcardsComponent {
   }
 
   calculateMetrics() {
+    // Calculate the total amount of all credit cards
+    this.totalCreditCardAmount = Math.round(
+      this.creditcards.reduce((total, card) => total + card.maxCredit, 0)
+    );
+
+    // Calculate the total number of credit cards
+    this.totalCreditCards = this.creditcards.length;
+
+    // Calculate the maximum interest rate among all credit cards
+    this.creditCardMaximumInterest = Math.max(
+      ...this.creditcards.map((card) => card.interestRate)
+    );
+// Calculate the number of credit cards with a maximum credit greater than 3000
     this.creditCardMaximumAmount = this.creditcards.filter(
       (card) => card.maxCredit > 3000
-    ).length;
-    this.creditCardMaximumInterest = this.creditcards.filter(
-      (card) => card.interestRate > 7
     ).length;
   }
 }

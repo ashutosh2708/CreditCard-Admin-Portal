@@ -181,34 +181,6 @@
       "termsAndConditions": "Following are the terms and conditions",
       "createdDate": "2023-31-08",
       "updatedDate": "2023-31-08"
-    },
-    {
-      "id": 16,
-      "name": "Platinum Card",
-      "description": "This is a test credit card",
-      "bankName": "ARC Bank",
-      "maxCredit": "10000",
-      "interestRate": 12,
-      "active": true,
-      "recommendedScore": "300-500",
-      "annualFee": 12,
-      "termsAndConditions": "Terms and conditions for the credit card",
-      "createdDate": "2023-10-18T04:00:00.000Z",
-      "updatedDate": "2023-10-19T04:00:00.000Z"
-    },
-    {
-      "name": "IDBI Bank",
-      "description": "This is a test credit card",
-      "bankName": "IDBI Bank",
-      "maxCredit": 5000,
-      "interestRate": 12,
-      "active": true,
-      "recommendedScore": "400-600",
-      "annualFee": 12,
-      "termsAndConditions": "Terms and conditions for the credit card",
-      "createdDate": "2024-01-24T18:30:00.000Z",
-      "updatedDate": "2024-01-18T18:30:00.000Z",
-      "id": 17
     }
   ]
 }
