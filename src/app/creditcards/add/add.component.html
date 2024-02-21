@@ -205,7 +205,7 @@
           >Active</mat-checkbox
         >
         <mat-error
-          *ngId="
+          *ngIf="
             creditCardForm.controls['interestRate']?.touched &&
             creditCardForm.controls['interestRate']?.hasError('required')
           "

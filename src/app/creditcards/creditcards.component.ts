@@ -67,7 +67,8 @@ export class CreditcardsComponent {
     this.creditCardMaximumInterest = Math.max(
       ...this.creditcards.map((card) => card.interestRate)
     );
-// Calculate the number of credit cards with a maximum credit greater than 3000
+    
+    // Calculate the number of credit cards with a maximum credit greater than 3000
     this.creditCardMaximumAmount = this.creditcards.filter(
       (card) => card.maxCredit > 3000
     ).length;

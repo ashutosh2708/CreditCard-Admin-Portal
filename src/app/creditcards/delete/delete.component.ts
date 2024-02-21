@@ -6,8 +6,7 @@ import { CreditcardsService } from 'src/app/services/creditcards.service';
 
 @Component({
   selector: 'app-delete',
-  templateUrl: './delete.component.html',
-  styleUrls: ['./delete.component.scss'],
+  templateUrl: './delete.component.html'
 })
 export class DeleteComponent {
   creditCardId!: Number;
