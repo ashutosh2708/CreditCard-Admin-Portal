@@ -1,9 +1,9 @@
 # Credit Card Admin Portal
 ## Dashboard Page
-![Screenshot (247)](https://github.com/ashutosh2708/CreditCard-Admin-Portal/assets/105096433/f9ee5d7c-e4c8-41ba-ae72-131a4ec72fdf)
+![Screenshot (254)](https://github.com/ashutosh2708/CreditCard-Admin-Portal/assets/105096433/5a7ed1db-4122-47c5-a1ba-00da92a8ee3e)
 
 ## Add New Credit Card Page
-![Screenshot (248)](https://github.com/ashutosh2708/CreditCard-Admin-Portal/assets/105096433/8ae38ed4-c6a6-4c3e-b9e1-808e6578bea4)
+![Screenshot (255)](https://github.com/ashutosh2708/CreditCard-Admin-Portal/assets/105096433/01456618-9eae-460a-b518-c646ba1af01c)
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.0.
