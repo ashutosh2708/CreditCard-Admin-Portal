@@ -5,6 +5,9 @@ import { SelectionModel } from '@angular/cdk/collections';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { CreditcardsService } from '../services/creditcards.service';
+import { CreditDialogComponent } from './dialog/credit-dialog/credit-dialog.component';
+
+import { MatDialog } from "@angular/material/dialog";
 
 @Component({
   selector: 'app-creditcards',
@@ -19,7 +22,7 @@ export class CreditcardsComponent {
   creditCardMaximumInterest: number = 0;
   creditCardMaximumAmount: number = 0;
 
-  constructor(private creditCardsService: CreditcardsService) {
+  constructor(private creditCardsService: CreditcardsService, public dialog:MatDialog) {
     this.creditCardsService.getCreditCards().subscribe((data: CreditCard[]) => {
       this.creditcards = data;
 
@@ -67,10 +70,18 @@ export class CreditcardsComponent {
     this.creditCardMaximumInterest = Math.max(
       ...this.creditcards.map((card) => card.interestRate)
     );
-    
+
     // Calculate the number of credit cards with a maximum credit greater than 3000
     this.creditCardMaximumAmount = this.creditcards.filter(
       (card) => card.maxCredit > 3000
     ).length;
+  }
+
+  openDialog(rowId:any) {
+    this.dialog.open(CreditDialogComponent, {
+      height: '358px',
+      width: '450px',
+      data: { data: rowId},
+    });
   }
 }

@@ -1,0 +1,45 @@
+ng-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+mat-card {
+  max-width: 450px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+
+  mat-card-header {
+    background-color: #3498db;
+    color: white;
+  }
+
+  mat-card-title-group {
+    display: flex;
+    justify-content: center;
+    padding: 16px;
+  }
+
+  mat-card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  mat-card-subtitle {
+    font-size: 1rem;
+  }
+
+  mat-card-content {
+    padding: 16px;
+
+    div {
+      margin-bottom: 8px;
+
+      strong {
+        margin-right: 8px;
+      }
+    }
+  }
+}

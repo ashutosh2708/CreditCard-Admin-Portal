@@ -1,5 +1,5 @@
-<ng-container class="mat-card" *ngIf="creditCardDetails">
-  <mat-card class="example-card">
+<ng-container *ngIf="creditCardDetails">
+  <mat-card>
     <mat-card-header>
       <mat-card-title-group>
         <mat-card-title>{{ creditCardDetails.name }}</mat-card-title>
@@ -21,5 +21,8 @@
       </div>
       <div><strong>Active: </strong>{{ creditCardDetails.active }}</div>
     </mat-card-content>
+    <mat-dialog-actions align="end">
+      <button mat-button mat-dialog-close>Close</button>
+    </mat-dialog-actions>
   </mat-card>
 </ng-container>

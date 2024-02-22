@@ -4,7 +4,6 @@ import { CommonModule } from '@angular/common';
 import { CreditcardsRoutingModule } from './creditcards-routing.module';
 import { CreditcardsComponent } from './creditcards.component';
 import { AddComponent } from './add/add.component';
-import { ViewComponent } from './view/view.component';
 import { EditComponent } from './edit/edit.component';
 import { DeleteComponent } from './delete/delete.component';
 
@@ -23,14 +22,16 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 
 import { ReactiveFormsModule } from '@angular/forms';
+import { CreditDialogComponent } from './dialog/credit-dialog/credit-dialog.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
     CreditcardsComponent,
     AddComponent,
-    ViewComponent,
     EditComponent,
     DeleteComponent,
+    CreditDialogComponent,
   ],
   imports: [
     CommonModule,
@@ -49,6 +50,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    MatDialogModule,
   ],
 })
 export class CreditcardsModule {}
