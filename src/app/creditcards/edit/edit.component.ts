@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Subject, takeUntil } from 'rxjs';
 import { CreditCard } from 'src/app/models/credit-card';
 import { CreditcardsService } from 'src/app/services/creditcards.service';
@@ -23,6 +23,7 @@ export class EditComponent {
   constructor(
     private formBuilder: FormBuilder,
     private route: ActivatedRoute,
+    private router: Router,
     private snackBar: MatSnackBar,
     private creditCardsService: CreditcardsService
   ) {
@@ -74,6 +75,7 @@ export class EditComponent {
         .pipe(takeUntil(this.destroy$))
         .subscribe(() => {
           this.showSuccessMessage('Credit Card Updated Successfully');
+          this.router.navigate(['creditcards']);
         });
     }
   }

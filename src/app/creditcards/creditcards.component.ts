@@ -7,7 +7,7 @@ import { MatSort } from '@angular/material/sort';
 import { CreditcardsService } from '../services/creditcards.service';
 import { CreditDialogComponent } from './dialog/credit-dialog/credit-dialog.component';
 
-import { MatDialog } from "@angular/material/dialog";
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-creditcards',
@@ -22,7 +22,10 @@ export class CreditcardsComponent {
   creditCardMaximumInterest: number = 0;
   creditCardMaximumAmount: number = 0;
 
-  constructor(private creditCardsService: CreditcardsService, public dialog:MatDialog) {
+  constructor(
+    private creditCardsService: CreditcardsService,
+    public dialog: MatDialog
+  ) {
     this.creditCardsService.getCreditCards().subscribe((data: CreditCard[]) => {
       this.creditcards = data;
 
@@ -59,8 +62,12 @@ export class CreditcardsComponent {
 
   calculateMetrics() {
     // Calculate the total amount of all credit cards
-    this.totalCreditCardAmount = Math.round(
-      this.creditcards.reduce((total, card) => total + card.maxCredit, 0)
+    this.totalCreditCardAmount = this.creditcards.reduce(
+      (total, card) => total + Number(card.maxCredit),
+      0
+    );
+    this.totalCreditCardAmount = parseFloat(
+      this.totalCreditCardAmount.toFixed(2)
     );
 
     // Calculate the total number of credit cards
@@ -77,11 +84,11 @@ export class CreditcardsComponent {
     ).length;
   }
 
-  openDialog(rowId:any) {
+  openDialog(rowId: any) {
     this.dialog.open(CreditDialogComponent, {
       height: '358px',
       width: '450px',
-      data: { data: rowId},
+      data: { data: rowId },
     });
   }
 }

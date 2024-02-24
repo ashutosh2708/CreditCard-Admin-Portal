@@ -1,4 +1,4 @@
-import { Component, Inject } from '@angular/core';
+import { Component, Inject, OnDestroy, OnInit } from '@angular/core';
 import { Subject, takeUntil } from 'rxjs';
 import { CreditCard } from 'src/app/models/credit-card';
 import { CreditcardsService } from 'src/app/services/creditcards.service';
@@ -9,7 +9,7 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
   templateUrl: './credit-dialog.component.html',
   styleUrls: ['./credit-dialog.component.scss'],
 })
-export class CreditDialogComponent {
+export class CreditDialogComponent implements OnInit, OnDestroy {
   creditCardDetails!: CreditCard;
   creditCardId!: Number;
 
@@ -19,8 +19,14 @@ export class CreditDialogComponent {
     public dialogRef: MatDialogRef<CreditDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public dialogData: any,
     private creditCardsService: CreditcardsService
-  ) {
-    this.creditCardId = dialogData.data;
+  ) {}
+
+  ngOnInit() {
+    this.getCreditCardDetails(this.dialogData);
+  }
+
+  getCreditCardDetails(rowId: any) {
+    this.creditCardId = rowId.data;
 
     this.creditCardsService
       .getCreditCardById(this.creditCardId)
