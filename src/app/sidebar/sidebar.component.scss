@@ -1,0 +1,28 @@
+/* Normal Menu Item Text Color */
+.menu-item {
+  color: #333333; /* Text color for normal state */
+  text-decoration: none; /* Remove underline from links */
+}
+
+/* Icon Styling */
+.menu-icon {
+    margin-right: 8px; /* Adjust the margin for spacing between the icon and text */
+    vertical-align: middle;
+  }
+
+/* Hover Effect on Non-Active Menu Items */
+.list-item:not(.active-link):hover {
+  background-color: #b8b8b8; /* Background color on hover for non-active items */
+  border-radius: 10px;  
+}
+
+/* Active Menu Item */
+.list-item.active-link {
+  background-color: #5666c0; /* Background color for the active item */
+  border-radius: 10px; /* Border radius for rounded corners on active item */
+}
+
+/* Link Text Color after Click */
+.list-item.active-link .menu-item {
+  color: #ffffff; /* Text color for active state */
+}

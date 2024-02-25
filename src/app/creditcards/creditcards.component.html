@@ -76,20 +76,18 @@
               aria-hidden="false"
               aria-label="Example home icon"
               fontIcon="visibility"
-              style="color: blue; cursor: pointer;"
+              style="color: blue; cursor: pointer"
               (click)="openDialog(element.id)"
             ></mat-icon>
           </a>
-          |
           <a [routerLink]="['edit', element.id]">
             <mat-icon
               aria-hidden="false"
               aria-label="Example home icon"
               fontIcon="edit"
-              style="color: green"
+              style="color: green; margin-left: 10px; margin-right: 10px"
             ></mat-icon>
           </a>
-          |
           <a [routerLink]="['delete', element.id]">
             <mat-icon
               aria-hidden="false"

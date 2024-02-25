@@ -1,15 +1,19 @@
-<mat-nav-list>
+<mat-nav-list class="nav-list">
   <mat-list-item
+    class="list-item"
     [routerLink]="['/creditcards']"
-    [routerLinkActive]="['active']"
+    routerLinkActive="active-link"
+    [routerLinkActiveOptions]="{ exact: true }"
   >
-    <a matLine>Dashboard</a>
+    <a class="menu-item"><mat-icon class="menu-icon">dashboard</mat-icon>Dashboard</a>
   </mat-list-item>
 
   <mat-list-item
+    class="list-item"
     [routerLink]="['/creditcards/add']"
-    [routerLinkActive]="['active']"
+    routerLinkActive="active-link"
+    [routerLinkActiveOptions]="{ exact: true }"
   >
-    <a matLine>Add New Credit Card</a>
+    <a class="menu-item"><mat-icon class="menu-icon">add_box</mat-icon>Add New Credit Card</a>
   </mat-list-item>
 </mat-nav-list>

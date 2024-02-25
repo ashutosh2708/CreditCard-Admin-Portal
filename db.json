@@ -2,7 +2,7 @@
   "creditcards": [
     {
       "id": 1,
-      "name": "SBI Bank",
+      "name": "SBI Card",
       "description": "SBI Bank gives you many choices and options.",
       "bankName": "SBI Bank",
       "maxCredit": 3000,
@@ -47,7 +47,7 @@
       "name": "Bank of America",
       "description": "Bank of America gives you many choices and options.",
       "bankName": "Bank of America",
-      "maxCredit": "6000",
+      "maxCredit": "3000",
       "interestRate": 10,
       "active": true,
       "recommendedScore": "700-900",
@@ -128,10 +128,10 @@
     },
     {
       "id": 10,
-      "name": "Bank of America",
+      "name": "America Card",
       "description": "Bank of America gives you many choices and options.",
       "bankName": "Bank of America",
-      "maxCredit": 3000,
+      "maxCredit": "8000",
       "interestRate": 10,
       "active": true,
       "recommendedScore": "700-900",
