@@ -19,7 +19,7 @@
         <strong>Recommended Score: </strong
         >{{ creditCardDetails.recommendedScore }}
       </div>
-      <div><strong>Active: </strong>{{ creditCardDetails.active }}</div>
+      <div><strong>Active: </strong>{{ creditCardDetails.active ? 'Yes' : 'No' }}</div>
     </mat-card-content>
     <mat-dialog-actions align="end">
       <button mat-button mat-dialog-close>Close</button>
