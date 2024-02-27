@@ -60,7 +60,9 @@
       </ng-container>
       <ng-container matColumnDef="active">
         <th mat-header-cell *matHeaderCellDef>Active</th>
-        <td mat-cell *matCellDef="let element">{{ element.active }}</td>
+        <td mat-cell *matCellDef="let element">
+          {{ element.active ? "Yes" : "No" }}
+        </td>
       </ng-container>
       <ng-container matColumnDef="recommendedScore">
         <th mat-header-cell *matHeaderCellDef>Recommended Score</th>
