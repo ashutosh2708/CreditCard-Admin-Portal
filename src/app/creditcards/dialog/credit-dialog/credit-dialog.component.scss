@@ -10,6 +10,7 @@ mat-card {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 
   mat-card-header {
     background-color: #86c4ee;
@@ -42,5 +43,9 @@ mat-card {
         margin-right: 8px;
       }
     }
+  }
+  & button {
+    background-color: #007bff;
+    color: #fff;
   }
 }
