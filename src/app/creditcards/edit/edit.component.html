@@ -98,12 +98,21 @@
       </div>
 
       <button
+      class="edit-button"
         mat-raised-button
         color="primary"
         type="submit"
         [disabled]="!editCreditCardForm.valid"
       >
         Edit Credit Card
+      </button>
+      <button
+      class="cancel-button"
+        mat-raised-button
+        color="warn"
+        (click)="cancelBtn()"
+      >
+        Cancel
       </button>
     </form>
   </mat-card-content>

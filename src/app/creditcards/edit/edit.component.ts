@@ -80,6 +80,10 @@ export class EditComponent {
     }
   }
 
+  cancelBtn(){
+    this.router.navigate(['creditcards']);
+  }
+
   showSuccessMessage(message: string) {
     this.snackBar.open(message, 'Close', {
       duration: 3000,
